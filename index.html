@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+    <p id="demo21"></p>
+    <p id="demo22"></p>
+    <p id="demo23"></p>
+    <p id="demo24"></p>
+    <p id="demo25"></p>
+    <p id="demo26"></p>
+    <p id="demo27"></p>
+    <p id="demo28"></p>
+    <p id="demo29"></p>
+    <p id="demo30"></p>
+    <p id="demo31"></p>
+    <p id="demo32"></p>
+    <p id="demo33"></p>
+   
+
+
+
+
+
+    <script>
+
+        //arrey:
+        //متصل کردن یک آرایه به آرایه دیگر
+        const arr1 = [1, 2, [3, 4]];
+        const arr2 = [[5, 6], 7, 8];
+
+        const arr3 = arr1.concat(arr2);
+        document.getElementById("demo1").innerHTML = arr3;
+
+
+        //نمونه اولیه آرایه ؟
+        const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+        let text2 = fruits2.constructor;
+        document.getElementById("demo2").innerHTML = text2;
+
+
+        //پیدا کردن عضوی از آرایه که این شرط را دارد
+        const ages = [3, 10, 18, 20];
+        document.getElementById("demo3").innerHTML = ages.find(checkAge);
+        function checkAge(age) {
+            return age > 18;
+        }
+
+
+        //نشان دادن نتیجه محاسبات آرایه های ریاضیاتی
+        const numbers = [4, 9, 16, 25];
+        document.getElementById("demo4").innerHTML = numbers.map(Math.sqrt);
+
+
+        //دیدن المان های آرایه و اینکه ویرگول می گذارد
+        let text5 = "ABCDEFG"
+        const myArr = Array.from(text5);
+        document.getElementById("demo5").innerHTML = myArr;
+
+        // نشان دادن طول یک رشته آرایه بر حسب تعداد
+        const fruits6 = ["Banana", "Orange", "Apple", "Mango"];
+        let length = fruits6.length;
+        document.getElementById("demo6").innerHTML = length;
+
+        //نشان دادن شماره آیدی آرایه
+        const fruits7 = ["Banana", "Orange", "Apple", "Mango"];
+        const keys = fruits7.keys();
+        let text7 = "";
+        for (let x of keys) {
+            text7 += x + "<br>";
+        }
+        document.getElementById("demo7").innerHTML = text7;
+
+        //مرتب کردن اعضای آرایه بر اساس حروف الفبا
+        const fruits8 = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo8").innerHTML = fruits8.sort();
+
+
+        //مقدار آرایه را چاپ می کند
+        const fruits9 = ["Banana", "Orange", "Apple", "Mango"];
+        const myArray = fruits9.valueOf();
+        document.getElementById("demo9").innerHTML = myArray;
+
+        //............................................................
+
+
+        //String:
+
+        // چاپ کردن حروف بر اساس شماره آیدی آنها
+        let text11 = "HELLO WORLD";
+        let letter = text11.charAt(0);
+        document.getElementById("demo11").innerHTML = letter;
+
+        //؟؟؟؟؟
+        let text12 = "The rain in SPAIN stays mainly in the plain";
+        let result12 = text12.match(/ain/);
+        document.getElementById("demo12").innerHTML = result12;
+
+
+        //پیدا کردن یک کلمه در بین یک رشته
+        let text13 = "Hello world, welcome to the universe.";
+        let result13 = text13.includes("world");
+        document.getElementById("demo13").innerHTML = result13;
+
+
+        //اختصاص دادن هر شماره به یک حرف الفبا
+        let text14 = String.fromCharCode(65);
+        document.getElementById("demo14").innerHTML = text14;
+
+        //هر کلمه چند حرف دارد
+        let text15 = "Mr. Blue has a blue house"
+        let position = text15.search("Blue");
+        document.getElementById("demo15").innerHTML = position;
+
+
+        //همه را به شکل کبتال چاپ کن
+        let text16 = "Hello World!";
+        let result16 = text16.toUpperCase();
+        document.getElementById("demo16").innerHTML = result16;
+
+
+        //جمع کردن حروف رشته باهم
+        let text17 = "     Hello World!     ";
+        let text18 = text17.trimEnd();
+        document.getElementById("demo17").innerHTML =
+            "Length text17 = " + text17.length + "<br>Length text18 = " + text18.length;
+
+
+        //رشته را تبدیل به حروف کوچک می کند
+        let text19 = "Hello World!";
+        let result19 = text19.toLowerCase();
+        document.getElementById("demo19").innerHTML = result19;
+
+
+        //non
+        let result20 =
+            "Is 123 NaN? " + Number.isNaN(123) + "<br>" +
+            "Is -123 NaN? " + Number.isNaN(-1.23) + "<br>" +
+            "Is '123' NaN? " + Number.isNaN('123') + "<br>" +
+            "Is 0/0 NaN? " + Number.isNaN(0 / 0);
+        document.getElementById("demo20").innerHTML = result20;
+
+
+        //safe integer
+        let result21 =
+            "Is 123 a safe integer? " + Number.isSafeInteger(123) + "<br>" +
+            "Is +123 a safe integer? " + Number.isSafeInteger(-123) + "<br>" +
+            "Is '123' a safe integer? " + Number.isSafeInteger('123');
+
+        document.getElementById("demo21").innerHTML = result21;
+
+
+        //???????
+        let num22 = 15;
+        let text22 = num22.toString();
+        document.getElementById("demo22").innerHTML = text22;
+
+
+        // رند کردن اعداد به بالا
+        let num23 = 13.3714;
+        document.getElementById("demo23").innerHTML = num23.toPrecision(2);
+
+
+        //رند کردن اعداد به پایین
+        let num24 = 5.56789;
+        let n = num24.toFixed();
+        document.getElementById("demo24").innerHTML = n;
+
+        //جذر گرفتن اعداد
+        document.getElementById("demo25").innerHTML = Math.PI;
+        document.getElementById("demo26").innerHTML = Math.sqrt(16);
+
+        //گرفتن کسینوس
+        let x27 = Math.cos(3.14);
+        document.getElementById("demo27").innerHTML = x27.toFixed(2);
+
+        //گرفتن سینوس
+        let x28 = Math.sin(3.14);
+        document.getElementById("demo28").innerHTML = x28.toFixed(2);
+
+
+        //گرفتن تانژانت
+        let radians = 2;
+        document.getElementById("demo29").innerHTML = Math.tan(radians);
+
+
+        //؟؟؟؟؟
+        document.getElementById("demo30").innerHTML = Math.LN2;
+
+
+        //تاریخ را نشان میدهد
+        const d31 = new Date();
+        let day31 = d31.getDate();
+        document.getElementById("demo31").innerHTML = day31;
+
+
+        //سال را نشان می هد
+        const d32 = new Date();
+        let year32 = d32.getFullYear();
+        document.getElementById("demo32").innerHTML = year32;
+
+
+        //ساعت را نشان می دهد
+        const d33 = new Date("July 21, 1983 01:15:00");
+        let hour = d33.getHours();
+        document.getElementById("demo33").innerHTML = hour;
+
+        
+
+    </script>
+</body>
+
+</html>
